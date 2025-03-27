@@ -1,4 +1,4 @@
-import {Contact, PrismaClient} from "@prisma/client";
+import { Contact } from "@prisma/client";
 import { database } from "../utils/global.utils";
 
 

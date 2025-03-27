@@ -13,6 +13,7 @@ app.use("/api/contacts", ContactRoute)
 app.use("/api/sync", SyncRoute)
 
 app.use(errorMiddleware);
+
 app.listen(process.env.PORT, () => {
     console.log(`Server is runnning on port ${process.env.PORT}`)
 })

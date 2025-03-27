@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Contact {
+  id                  Int      @id @default(autoincrement())
+  local_id           String    @unique
+  name               String    
+  phone_number       String?   
+  image_url          String?   
+  email              String?   
+  occupation         String?   
+  notes              String?   
+  is_favorite        Boolean   @default(false)
+  edited_at          String?
+  created_at         DateTime  @default(now()) @db.Timestamp()
+}
